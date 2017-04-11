@@ -429,8 +429,8 @@ endif()
 
 if (NANOGUI_BUILD_PYTHON)
   # Need PIC code in libnanogui even when compiled as a static library
-  set_target_properties(nanogui-obj PROPERTIES POSITION_INDEPENDENT_CODE ON)
-  set_target_properties(glfw_objects PROPERTIES POSITION_INDEPENDENT_CODE ON)
+  set_target_properties(nanogui-obj PROPERTIES POSITION_INDEPENDENT_CODE ON FOLDER "3rdPartyLibs")
+  set_target_properties(glfw_objects PROPERTIES POSITION_INDEPENDENT_CODE ON FOLDER "3rdPartyLibs")
 
   include_directories("ext/pybind11/include" ${PYTHON_INCLUDE_DIR})
   add_library(nanogui-python-obj OBJECT
